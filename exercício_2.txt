@@ -1,0 +1,64 @@
+#include <iostream>
+#include <cctype>
+#include <locale>
+using namespace std;
+
+int main()
+{
+
+setlocale(LC_ALL, "Portuguese");
+
+char valor;
+
+float n1, n2,r;
+do{
+
+cout << "Digite + se quiser fazer uma soma."<< endl;
+cout <<"Digite - se quiser fazer uma sbtração."<< endl;
+cout<< "Digite * se quiser fazer uma multiplicação."<<endl;
+cout<< "Digite / se quiser fazer uma divisão."<<endl;
+cout <<"Digite s se quiser sair do programa." << endl;
+cin>> valor;
+valor = toupper (valor);
+
+switch (valor){
+case '+' :
+cout <<"Digite dois numeros:"<<endl;
+cin>> n1>>n2;
+r= n1+n2;
+cout << "O resultado é: " <<r<< endl;
+break;
+
+case '-' :
+cout <<"Digite dois numeros:"<<endl;
+cin>> n1>>n2;
+r= n1-n2;
+cout << "O resultado é:"<<r<< endl;
+break;
+
+case '*' :
+cout << "Digite dois numeros:"<< endl;
+cin>>n1>>n2;
+r= n1*n2;
+cout << "O resultado é:" <<r<<endl;
+break;
+
+case '/' :
+cout << "Digite dois numeros:"<< endl;
+cin>>n1>>n2;
+r= n1/n2;
+cout<<"O resultado é: " << r <<endl;
+break;
+
+case 'S' :
+cout << "Saindo do programa."<<endl;
+break;
+
+default:
+    cout <<"Opção inválida"<< endl;
+    break;
+
+}
+  } while (valor!= 'S');
+return 0;
+}

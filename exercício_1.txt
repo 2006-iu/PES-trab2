@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int contador = 0;
+    int numero;
+
+    do {
+        cout << "Digite um numero: ";
+        cin >> numero;
+
+        if (numero != 0) {
+            contador++;
+        }
+
+    } while (numero != 0);
+
+    cout << "Voce digitou " << contador << " numeros." << endl;
+
+    return 0;
+}
